@@ -15,12 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Platformer"
+config/name="Jump Quest "
 run/main_scene="res://Levels/Level 1/L1.tscn"
 config/icon="res://icon.png"
 
 [display]
 
+window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 

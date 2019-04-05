@@ -21,7 +21,8 @@ const JUMP = 930
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	# Graviy 
-	velocity.y += GRAVITY  
+	velocity.y += GRAVITY
+	  
 	# Move right 
 	if Input.is_action_pressed("ui_right") && canmove:
 		# Acceleration 
@@ -51,20 +52,25 @@ func _physics_process(delta):
 		$Sprite.play("Fall")
 		canmove = false
 	else:
-		# Jump animation and air resistance 
+		# Jump animation 
 		$Sprite.play("Jump")
+		# Air resistance 
 		velocity.x = lerp(velocity.x, 0, AIR_RESISTANCE)
 		
 			
 	# Stop jump if a ceiling or wall is hit 
 	if (is_on_ceiling() || is_on_wall()) && velocity.y < 0:
 			velocity.y = 0
-			
+	
+	# Die when below threshold 		
 	if position.y > fall_reset:
 		isdead = true
-
+	
+	
 	if isdead:
 		set_position(start_loc)
+		velocity = Vector2(0,0)
+		$Sprite.flip_h = false
 		deaths += 1
 		isdead = false
 		canmove = true
