@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 # Variables
 var velocity = Vector2()
+var level = 1
 var start_loc
 var isdead = false
 var deaths = 0
@@ -13,6 +14,7 @@ var canmove = true
 const UP = Vector2(0, -1)
 const GRAVITY = 30
 const FRICTION = 0.08
+const WALL_FRICTION = 0.3
 const AIR_RESISTANCE = 0.05
 const ACCELERATION = 28
 const SPEED = 410
@@ -60,12 +62,11 @@ func _physics_process(delta):
 			
 	# Stop jump if a ceiling or wall is hit 
 	if (is_on_ceiling() || is_on_wall()) && velocity.y < 0:
-			velocity.y = 0
+		velocity.y = lerp(velocity.y, 0, WALL_FRICTION)
 	
 	# Die when below threshold 		
 	if position.y > fall_reset:
 		isdead = true
-	
 	
 	if isdead:
 		set_position(start_loc)

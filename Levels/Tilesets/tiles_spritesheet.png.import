@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tinyShroom_tan.png-edcf8ca6ee7c767607e01a6428518026.stex"
+path="res://.import/tiles_spritesheet.png-43312c761d6345c7a27ba20a929f6d7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/Level 2/tinyShroom_tan.png"
-dest_files=[ "res://.import/tinyShroom_tan.png-edcf8ca6ee7c767607e01a6428518026.stex" ]
+source_file="res://Levels/Tilesets/tiles_spritesheet.png"
+dest_files=[ "res://.import/tiles_spritesheet.png-43312c761d6345c7a27ba20a929f6d7a.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

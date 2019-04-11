@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiles_spritesheet.png-4d640c88a28e9017fc4e2514bf694191.stex"
+path="res://.import/sky.jpg-1240d29c2715fe67f80a426999eb918e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/tiles_spritesheet.png"
-dest_files=[ "res://.import/tiles_spritesheet.png-4d640c88a28e9017fc4e2514bf694191.stex" ]
+source_file="res://Levels/Tilesets/sky.jpg"
+dest_files=[ "res://.import/sky.jpg-1240d29c2715fe67f80a426999eb918e.stex" ]
 
 [params]
 

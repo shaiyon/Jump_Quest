@@ -15,7 +15,9 @@
 [ext_resource path="res://Player/Sprites/p3_hurt.png" type="Texture" id=13]
 [ext_resource path="res://Player/Sprites/p3_stand.png" type="Texture" id=14]
 [ext_resource path="res://Player/Sprites/p3_jump.png" type="Texture" id=15]
-[ext_resource path="res://Levels/Level 1/L1sky.jpg" type="Texture" id=16]
+[ext_resource path="res://Levels/Tilesets/sky.jpg" type="Texture" id=16]
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
