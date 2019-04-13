@@ -1,4 +1,5 @@
 extends Area2D
+# Transitions between levels 
 
 # Variables
 var next_level = "res://Levels//Level {0}//L{0}.tscn"

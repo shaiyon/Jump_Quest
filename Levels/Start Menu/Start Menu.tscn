@@ -23,23 +23,24 @@ margin_bottom = 14.0
 text = "Jump Quest"
 align = 1
 
-[node name="Start game" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 18.0
 margin_right = 88.0
 margin_bottom = 38.0
 text = "Start"
 
-[node name="Change character" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Change skin" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 42.0
 margin_right = 88.0
 margin_bottom = 62.0
 text = "Change skin"
 
-[node name="Quit game" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 66.0
 margin_right = 88.0
 margin_bottom = 86.0
-text = "Quit "
+text = "Quit"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Start game" to="." method="_on_Start_game_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit game" to="." method="_on_Quit_game_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Change skin" to="." method="_on_Change_skin_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
