@@ -5,7 +5,7 @@ var velocity = Vector2()
 var start_loc
 var isdead = false
 var fall_reset
-var fall_anim
+var fall_threshold
 var canmove = true
 # Constants 
 const UP = Vector2(0, -1)
@@ -47,7 +47,7 @@ func _physics_process(delta):
 		# Friction 
 		velocity.x = lerp(velocity.x, 0, FRICTION)
 	# Fall animation 
-	elif position.y > fall_anim:
+	elif position.y > fall_threshold:
 		$Sprite.play("Fall{0}".format([global.skin]))
 		canmove = false
 	else:
@@ -56,11 +56,11 @@ func _physics_process(delta):
 		# Air resistance 
 		velocity.x = lerp(velocity.x, 0, AIR_RESISTANCE)
 		
-	# Stop jump if a ceiling or wall is hit 
+	# Slow down significantly while on ceiling or wall
 	if (is_on_ceiling() || is_on_wall()) && velocity.y < 0:
 		velocity.y = lerp(velocity.y, 0, WALL_FRICTION)
 	
-	# Die when below threshold 		
+	# Die when below reset threshold 		
 	if position.y > fall_reset:
 		isdead = true
 	
@@ -70,6 +70,7 @@ func _physics_process(delta):
 		global.deaths += 1
 		isdead = false
 		canmove = true
+		enemy_death_counter = 0
 		
 	velocity = move_and_slide(velocity, UP)
 	

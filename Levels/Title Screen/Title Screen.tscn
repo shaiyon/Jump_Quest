@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Levels/Start Menu/Start Menu.gd" type="Script" id=1]
+[ext_resource path="res://Levels/Title Screen/Title Screen.gd" type="Script" id=1]
 
 [node name="Start Menu" type="Control"]
 anchor_right = 1.0
@@ -29,7 +29,7 @@ margin_right = 88.0
 margin_bottom = 38.0
 text = "Start"
 
-[node name="Change skin" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Change_skin" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 42.0
 margin_right = 88.0
 margin_bottom = 62.0
@@ -42,5 +42,5 @@ margin_bottom = 86.0
 text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Change skin" to="." method="_on_Change_skin_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Change_skin" to="." method="_on_Change_skin_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

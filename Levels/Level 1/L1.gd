@@ -4,8 +4,6 @@ extends Node2D
 func _ready():
 	$Player.start_loc = $Player.position
 	$Player.fall_reset = 4000
-	$Player.fall_anim = 1000
+	$Player.fall_threshold = 1000
+	$Player/Sprite.play("Idle{0}".format([global.skin]))	
 	global.level = 1
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

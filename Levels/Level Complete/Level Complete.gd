@@ -3,7 +3,7 @@ extends Area2D
 
 # Variables
 var next_level = "res://Levels//Level {0}//L{0}.tscn"
-var end_screen = "res://Levels//End Screen.tscn"
+var end_screen = "res://Levels//End Screen//End Screen.tscn"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

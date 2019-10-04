@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Levels/End Screen.gd" type="Script" id=1]
+[ext_resource path="res://Levels/End Screen/End Screen.gd" type="Script" id=1]
 
 [node name="End Screen" type="Control"]
 anchor_right = 1.0
@@ -12,28 +12,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 471.0
+margin_left = 468.0
 margin_top = 269.0
-margin_right = 552.0
+margin_right = 555.0
 margin_bottom = 331.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 81.0
+margin_right = 87.0
 margin_bottom = 14.0
 text = "You won boi!"
 align = 1
 
-[node name="Menu" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="Title_screen" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 18.0
-margin_right = 81.0
+margin_right = 87.0
 margin_bottom = 38.0
-text = "Menu"
+text = "Title screen"
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 42.0
-margin_right = 81.0
+margin_right = 87.0
 margin_bottom = 62.0
 text = "Quit"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Title_screen" to="." method="_on_Title_screen_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
