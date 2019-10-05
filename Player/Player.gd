@@ -7,6 +7,7 @@ var isdead = false
 var fall_reset
 var fall_threshold
 var canmove = true
+var direction = 1
 # Constants 
 const UP = Vector2(0, -1)
 const GRAVITY = 30
@@ -19,6 +20,7 @@ const JUMP = 930
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	
 	# Graviy 
 	velocity.y += GRAVITY
 	  
@@ -28,6 +30,7 @@ func _physics_process(delta):
 		velocity.x = min(velocity.x+ACCELERATION, SPEED)
 		# Walk right animation 
 		$Sprite.flip_h = false
+		direction = 1
 		$Sprite.play("Walk{0}".format([global.skin]))
 	# Move left 
 	elif Input.is_action_pressed("ui_left") && canmove:
@@ -35,6 +38,7 @@ func _physics_process(delta):
 		velocity.x = max(velocity.x-ACCELERATION, -SPEED)
 		# Walk left animation 
 		$Sprite.flip_h = true
+		direction = -1
 		$Sprite.play("Walk{0}".format([global.skin]))
 	# Idle animation 
 	else:
@@ -63,14 +67,21 @@ func _physics_process(delta):
 	# Die when below reset threshold 		
 	if position.y > fall_reset:
 		isdead = true
-	
+ 
 	if isdead:
 		set_position(start_loc)
 		velocity = Vector2(0,0)
 		global.deaths += 1
 		isdead = false
 		canmove = true
-		enemy_death_counter = 0
-		
+	
+	if global.hit:
+		enemy_collide()
+		global.hit = false
+	
 	velocity = move_and_slide(velocity, UP)
+	
+func enemy_collide():
+	velocity.x = velocity.x * -direction + 1000 * -direction
+	velocity.y = -velocity.y - 1000 
 	

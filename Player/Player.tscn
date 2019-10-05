@@ -123,16 +123,13 @@ position = Vector2( 35, 52.5 )
 frames = SubResource( 1 )
 animation = "Idle1"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 34, 52 )
-shape = SubResource( 2 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 scale = Vector2( 1.2, 1 )
@@ -142,4 +139,8 @@ motion_scale = Vector2( 0.06, 0.06 )
 scale = Vector2( 1.53314, 1.52276 )
 texture = ExtResource( 44 )
 offset = Vector2( 20, 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 34, 52 )
+shape = SubResource( 2 )
 
