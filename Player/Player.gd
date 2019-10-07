@@ -44,21 +44,24 @@ func _physics_process(delta):
 	else:
 		$Sprite.play("Idle{0}".format([global.skin]))	
 	
-	if is_on_floor() && canmove:
+	if is_on_floor():
 		# Jump 
 		if Input.is_action_just_pressed("ui_up") && !(is_on_ceiling() || is_on_wall()):
 			velocity.y = -JUMP
 		# Friction 
 		velocity.x = lerp(velocity.x, 0, FRICTION)
+		canmove = true
 	# Fall animation 
 	elif position.y > fall_threshold:
-		$Sprite.play("Fall{0}".format([global.skin]))
 		canmove = false
 	else:
 		# Jump animation 
 		$Sprite.play("Jump{0}".format([global.skin]))
 		# Air resistance 
 		velocity.x = lerp(velocity.x, 0, AIR_RESISTANCE)
+	
+	if !canmove:
+		$Sprite.play("Fall{0}".format([global.skin]))
 		
 	# Slow down significantly while on ceiling or wall
 	if (is_on_ceiling() || is_on_wall()) && velocity.y < 0:
@@ -69,11 +72,7 @@ func _physics_process(delta):
 		isdead = true
  
 	if isdead:
-		set_position(start_loc)
-		velocity = Vector2(0,0)
-		global.deaths += 1
-		isdead = false
-		canmove = true
+		death_reset()
 	
 	if global.hit:
 		enemy_collide()
@@ -82,6 +81,19 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, UP)
 	
 func enemy_collide():
+	# Knockback
 	velocity.x = velocity.x * -direction + 1000 * -direction
-	velocity.y = -velocity.y - 1000 
+	velocity.y = -velocity.y * 3
+	# Timer to disable movement after collision 
+	$KnockbackTimer.start()
+	canmove = false
 	
+func death_reset():
+	set_position(start_loc)
+	velocity = Vector2(0,0)
+	global.deaths += 1
+	isdead = false
+	canmove = true
+
+func _on_Timer_timeout():
+	canmove = true
