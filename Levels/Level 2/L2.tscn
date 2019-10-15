@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Levels/Level 2/L2.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Tilesets/tiles_spritesheet.png" type="Texture" id=3]
 [ext_resource path="res://Levels/Level Complete/Level Complete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/Fly.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=6]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35, 35 )
@@ -298,4 +302,10 @@ tile_data = PoolIntArray( -2949020, 5, 0, -2817948, 15, 0, -2817946, 1, 0, -2817
 
 [node name="Level Complete" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2403, -704 )
+
+[node name="Fly" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1925, 126 )
+
+[node name="Slime" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2690, -296 )
 

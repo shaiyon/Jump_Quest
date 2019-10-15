@@ -81,9 +81,14 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, UP)
 	
 func enemy_collide():
+	var air_direction = 0
+	if velocity.y > 0:
+		air_direction = 1
+	if velocity.y < 0:
+		air_direction = -1
 	# Knockback
-	velocity.x = velocity.x * -direction + 1000 * -direction
-	velocity.y = -velocity.y * 3
+	velocity.x = (-direction * 2700) + (-direction * velocity.y)
+	velocity.y = (-velocity.y / 6) + (-air_direction * 500)
 	# Timer to disable movement after collision 
 	$KnockbackTimer.start()
 	canmove = false

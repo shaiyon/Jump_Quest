@@ -4,8 +4,8 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Levels/Tilesets/SkyTiles.tres" type="TileSet" id=3]
 [ext_resource path="res://Levels/Level Complete/Level Complete.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Levels/Enemies/Slime.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Levels/Enemies/Fly.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemies/Fly.tscn" type="PackedScene" id=6]
 
 [node name="L1" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,9 +30,9 @@ position = Vector2( 805, -224 )
 [node name="Slime2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1365, -1029 )
 
-[node name="Slime3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1925, 935 )
-
 [node name="Fly" parent="." instance=ExtResource( 6 )]
-position = Vector2( 140, 0 )
+position = Vector2( 1925, 262 )
+
+[node name="Fly2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2310, -490 )
 
