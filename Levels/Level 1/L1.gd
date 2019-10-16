@@ -7,3 +7,4 @@ func _ready():
 	$Player.fall_threshold = 1000
 	$Player/Sprite.play("Idle{0}".format([global.skin]))	
 	global.level = 1
+	global.levelTime = 0
