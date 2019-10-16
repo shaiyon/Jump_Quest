@@ -7,3 +7,6 @@ This project is a 2D Platforming game made with the Godot engine. Using the brut
 
 ![Jump Quest Gameplay](Assets/jumpquest.gif)
 
+
+Download link (Windows): https://www.mediafire.com/file/ze71del0n4p0hbh/Jump_Quest.zip/file
+To play, just download the above ZIP file, unzip and run the executable! 
