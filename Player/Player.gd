@@ -97,6 +97,7 @@ func death_reset():
 	set_position(start_loc)
 	velocity = Vector2(0,0)
 	global.deaths += 1
+	$Control/PanelContainer2/Deaths.set_text("Deaths: {0}".format([global.deaths]))
 	isdead = false
 	canmove = true
 
