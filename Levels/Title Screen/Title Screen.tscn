@@ -1,46 +1,101 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Levels/Title Screen/Title Screen.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/BreeSerif64.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/btn-play.png" type="Texture" id=3]
+[ext_resource path="res://Assets/btn-play-hover.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/BreeSerif32.tres" type="DynamicFont" id=5]
+[ext_resource path="res://GUI/SkinButton/SkinButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/btn-power.png" type="Texture" id=7]
+[ext_resource path="res://Assets/btn-power-hover.png" type="Texture" id=8]
 
 [node name="Start Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 468.0
-margin_top = 257.0
-margin_right = 556.0
-margin_bottom = 343.0
+margin_left = 343.0
+margin_top = 48.0
+margin_right = 680.0
+margin_bottom = 551.0
+custom_constants/separation = 8
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 88.0
-margin_bottom = 14.0
+margin_right = 337.0
+margin_bottom = 87.0
+custom_fonts/font = ExtResource( 2 )
 text = "Jump Quest"
 align = 1
 
-[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 88.0
-margin_bottom = 38.0
-text = "Start"
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 95.0
+margin_right = 337.0
+margin_bottom = 127.0
+rect_min_size = Vector2( 32, 32 )
 
-[node name="Change_skin" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 42.0
-margin_right = 88.0
-margin_bottom = 62.0
-text = "Change skin"
+[node name="Start" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+modulate = Color( 0.730263, 1, 0.359375, 1 )
+margin_left = 72.0
+margin_top = 135.0
+margin_right = 264.0
+margin_bottom = 327.0
+rect_min_size = Vector2( 192, 192 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+expand = true
 
-[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 66.0
-margin_right = 88.0
-margin_bottom = 86.0
-text = "Quit"
+[node name="Spacer2" type="Control" parent="CenterContainer/VBoxContainer"]
+margin_top = 335.0
+margin_right = 337.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 16, 16 )
 
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+margin_top = 359.0
+margin_right = 337.0
+margin_bottom = 403.0
+custom_fonts/font = ExtResource( 5 )
+text = "Choose a skin"
+align = 1
+
+[node name="SkinButton" parent="CenterContainer/VBoxContainer" instance=ExtResource( 6 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 411.0
+margin_right = 337.0
+margin_bottom = 503.0
+
+[node name="Quit" type="TextureButton" parent="."]
+modulate = Color( 0.607843, 0.219608, 0.219608, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -80.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+expand = true
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Change_skin" to="." method="_on_Change_skin_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="skin_changed" from="CenterContainer/VBoxContainer/SkinButton" to="." method="_on_SkinButton_skin_changed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
