@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GUI/SkinButton/SkinButton.gd" type="Script" id=1]
+[ext_resource path="res://Player/Sprites/Skin 1/p3_stand.png" type="Texture" id=2]
+
+[node name="SkinButton" type="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = -420.0
+margin_bottom = -208.0
+rect_min_size = Vector2( 92, 92 )
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+margin_left = 13.0
+margin_right = 79.0
+margin_bottom = 92.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+[connection signal="mouse_entered" from="." to="." method="_on_SkinButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_SkinButton_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_SkinButton_pressed"]
