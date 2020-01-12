@@ -2,12 +2,12 @@
 
 [ext_resource path="res://Levels/Title Screen/Title Screen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/BreeSerif64.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Assets/btn-play.png" type="Texture" id=3]
-[ext_resource path="res://Assets/btn-play-hover.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Title Screen Assets/btn-play.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Title Screen Assets/btn-play-hover.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/BreeSerif32.tres" type="DynamicFont" id=5]
-[ext_resource path="res://GUI/SkinButton/SkinButton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/btn-power.png" type="Texture" id=7]
-[ext_resource path="res://Assets/btn-power-hover.png" type="Texture" id=8]
+[ext_resource path="res://Levels/Title Screen/SkinButton/SkinButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Title Screen Assets/btn-power.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Title Screen Assets/btn-power-hover.png" type="Texture" id=8]
 
 [node name="Start Menu" type="Control"]
 anchor_right = 1.0
@@ -82,6 +82,7 @@ margin_left = 0.0
 margin_top = 411.0
 margin_right = 337.0
 margin_bottom = 503.0
+skin = 0
 
 [node name="Quit" type="TextureButton" parent="."]
 modulate = Color( 0.607843, 0.219608, 0.219608, 1 )
@@ -96,6 +97,7 @@ size_flags_horizontal = 4
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 expand = true
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="skin_changed" from="CenterContainer/VBoxContainer/SkinButton" to="." method="_on_SkinButton_skin_changed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

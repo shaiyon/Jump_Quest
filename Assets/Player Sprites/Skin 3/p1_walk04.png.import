@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/p1_walk04.png-9923d478f2e17737261c747741be7475.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/Player Sprites/Skin 3/p1_walk04.png"
+dest_files=[ "res://.import/p1_walk04.png-9923d478f2e17737261c747741be7475.stex" ]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemies/Fly.gd" type="Script" id=1]
-[ext_resource path="res://Enemies/Sprites/flyFly1.png" type="Texture" id=2]
-[ext_resource path="res://Enemies/Sprites/flyFly2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemy Sprites/flyFly1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Enemy Sprites/flyFly2.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,7 +26,6 @@ __meta__ = {
 position = Vector2( 0, 0.5 )
 scale = Vector2( 1, 1.03846 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 flip_h = true
 

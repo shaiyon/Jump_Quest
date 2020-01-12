@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/slimeWalk2.png-b043b5517c49940ada1455b76b8ed69c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/Enemy Sprites/slimeWalk2.png"
+dest_files=[ "res://.import/slimeWalk2.png-b043b5517c49940ada1455b76b8ed69c.stex" ]
 
 [params]
 

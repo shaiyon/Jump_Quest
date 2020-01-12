@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/p3_duck.png-30bc98a21f559cfb02c5bbbcd28cc9d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/Player Sprites/Skin 1/p3_duck.png"
+dest_files=[ "res://.import/p3_duck.png-30bc98a21f559cfb02c5bbbcd28cc9d0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/sky.jpg-ff7f1efbf82645fe36237ddc81d26065.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/Tilesets/sky.jpg"
+dest_files=[ "res://.import/sky.jpg-ff7f1efbf82645fe36237ddc81d26065.stex" ]
 
 [params]
 

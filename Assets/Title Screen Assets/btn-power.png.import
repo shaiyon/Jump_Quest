@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex"
+path="res://.import/btn-power.png-5f53c48a6dbdf803f208cd4b84f69035.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon.png"
-dest_files=[ "res://.import/icon.png-ec880de02d5dab0aa15458af9d6c53ed.stex" ]
+source_file="res://Assets/Title Screen Assets/btn-power.png"
+dest_files=[ "res://.import/btn-power.png-5f53c48a6dbdf803f208cd4b84f69035.stex" ]
 
 [params]
 
