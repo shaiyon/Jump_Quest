@@ -85,7 +85,6 @@ margin_left = 0.0
 margin_top = 395.0
 margin_right = 337.0
 margin_bottom = 487.0
-skin = 0
 
 [node name="Quit" type="TextureButton" parent="."]
 modulate = Color( 0.607843, 0.219608, 0.219608, 1 )
@@ -103,6 +102,7 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="skin_changed" from="CenterContainer/VBoxContainer/SkinButton" to="." method="_on_SkinButton_skin_changed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

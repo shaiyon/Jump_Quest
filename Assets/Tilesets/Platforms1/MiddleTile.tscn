@@ -6,8 +6,8 @@
 extents = Vector2( 35, 35 )
 
 [node name="MiddleTile" type="Sprite"]
-position = Vector2( -7.62939e-06, 0 )
-scale = Vector2( 0.457143, 0.457143 )
+position = Vector2( -7.62939e-006, 0 )
+scale = Vector2( 0.914286, 0.914286 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -21,3 +21,4 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 35, 35 )
 shape = SubResource( 1 )
+

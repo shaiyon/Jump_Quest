@@ -48,7 +48,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().paused =  !get_tree().paused
 	
-	if !isdead:
+	if canmove:
 		# Jump 
 		if Input.is_action_just_pressed("ui_up") && !(is_on_ceiling()):
 			velocity.y = -JUMP * time_multiplier
