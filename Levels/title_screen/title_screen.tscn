@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Levels/Title Screen/Title Screen.gd" type="Script" id=1]
+[ext_resource path="res://Levels/title_screen/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/BreeSerif64.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/Title Screen Assets/btn-play.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Title Screen Assets/btn-play-hover.png" type="Texture" id=4]
 [ext_resource path="res://Fonts/BreeSerif32.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Levels/Title Screen/SkinButton/SkinButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/title_screen/SkinButton/SkinButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Title Screen Assets/btn-power.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Title Screen Assets/btn-power-hover.png" type="Texture" id=8]
 
@@ -28,9 +28,9 @@ mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 343.0
-margin_top = 48.0
+margin_top = 56.0
 margin_right = 680.0
-margin_bottom = 551.0
+margin_bottom = 543.0
 custom_constants/separation = 8
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
@@ -68,7 +68,7 @@ rect_min_size = Vector2( 16, 16 )
 modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
 margin_top = 359.0
 margin_right = 337.0
-margin_bottom = 403.0
+margin_bottom = 387.0
 custom_fonts/font = ExtResource( 5 )
 text = "Choose a skin"
 align = 1
@@ -79,10 +79,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 0.0
-margin_top = 411.0
+margin_top = 395.0
 margin_right = 337.0
-margin_bottom = 503.0
-skin = 0
+margin_bottom = 487.0
 
 [node name="Quit" type="TextureButton" parent="."]
 modulate = Color( 0.607843, 0.219608, 0.219608, 1 )

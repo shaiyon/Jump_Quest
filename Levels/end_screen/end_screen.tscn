@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Levels/End Screen/End Screen.gd" type="Script" id=1]
+[ext_resource path="res://Levels/end_screen/end_screen.gd" type="Script" id=1]
+
+
 
 [node name="End Screen" type="Control"]
 anchor_right = 1.0

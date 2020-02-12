@@ -7,4 +7,3 @@ var deaths = 0
 var skin = 1
 var hit = false
 var levelTime = 0
-

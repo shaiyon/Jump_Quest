@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Levels/Level 1/L1.gd" type="Script" id=1]
+[ext_resource path="res://Levels/level_1/level_1.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tilesets/SkyTiles.tres" type="TileSet" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Level Complete/Level Complete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/level_complete/level_complete.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Fly.tscn" type="PackedScene" id=6]
 

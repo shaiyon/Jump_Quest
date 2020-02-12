@@ -15,19 +15,22 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Jump Quest "
-run/main_scene="res://Levels/Title Screen/Title Screen.tscn"
+config/name="Jump_Quest"
+run/main_scene="res://Levels/title_screen/title_screen.tscn"
+boot_splash/fullsize=false
 config/icon="res://Assets/icon.png"
 
 [autoload]
 
 global="*res://global.gd"
 
+[debug]
+
+settings/stdout/print_fps=true
+
 [display]
 
 window/size/resizable=false
-window/size/borderless=true
-window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 

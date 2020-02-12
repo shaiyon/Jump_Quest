@@ -5,6 +5,5 @@
 *.tmp
 *.x86_64
 *.x86
-
 .DS_Store
 .import/

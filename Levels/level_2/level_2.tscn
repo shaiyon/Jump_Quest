@@ -1,11 +1,16 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Levels/Level 2/L2.gd" type="Script" id=1]
+[ext_resource path="res://Levels/level_2/level_2.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tilesets/tiles_spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Level Complete/Level Complete.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/level_complete/level_complete.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemies/Fly.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Enemies/Slime.tscn" type="PackedScene" id=6]
+
+
+
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 35, 35 )

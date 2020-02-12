@@ -1,8 +1,8 @@
 extends Area2D
 # Transitions between levels 
 
-var next_level = "res://Levels//Level {0}//L{0}.tscn"
-var end_screen = "res://Levels//End Screen//End Screen.tscn"
+var next_level = "res://Levels/level_{0}/level_{0}.tscn"
+var end_screen = "res://Levels/end_screen/end_screen.tscn"
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":

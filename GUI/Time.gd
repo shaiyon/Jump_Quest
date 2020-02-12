@@ -1,5 +1,7 @@
 extends Label
 
+
+
 # Level timer, counts in increments of one second 
 func _on_Timer_timeout():
 	global.levelTime += 1

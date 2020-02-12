@@ -11,7 +11,7 @@ anchor_bottom = 1.0
 [node name="PanelContainer" type="PanelContainer" parent="."]
 margin_left = 20.0
 margin_top = 25.0
-margin_right = 62.0
+margin_right = 78.0
 margin_bottom = 53.0
 
 [node name="Timer" type="Timer" parent="PanelContainer"]
@@ -40,6 +40,7 @@ text = "Deaths: 0 "
 script = SubResource( 1 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+pause_mode = 2
 margin_right = 1024.0
 margin_bottom = 600.0
 
