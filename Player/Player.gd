@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 # Variables
 var velocity = Vector2()
-var start_loc
+var start_loc = Vector2(0,-100)
 var isdead = false
-var fall_reset
-var fall_threshold
+var fall_reset = 8000
+var fall_threshold = 4000
 var canmove = true
 var direction = 1
 var time_multiplier = 1.0
@@ -48,7 +48,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().paused =  !get_tree().paused
 	
-	if is_on_floor():
+	if !isdead:
 		# Jump 
 		if Input.is_action_just_pressed("ui_up") && !(is_on_ceiling()):
 			velocity.y = -JUMP * time_multiplier
@@ -56,7 +56,7 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, 0, FRICTION)
 		canmove = true
 	# Fall animation 
-	elif position.y > fall_threshold:
+	elif position.y < fall_threshold:
 		canmove = false
 	else:
 		# Jump animation 
